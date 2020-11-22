@@ -11,17 +11,19 @@ import RoomDetailDashboard from "./components/room-detail/RoomDetailDashboard";
 function App() {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route exact path="/">
-          <LoginDashboard></LoginDashboard>
-        </Route>
-        <Route exact path="/rooms">
-          <RoomDashboard className="dashboard-background"></RoomDashboard>
-        </Route>
-        <Route exact path="/rooms/:id">
-          <RoomDetailDashboard></RoomDetailDashboard>
-        </Route>
-      </Switch>
+      <div className="container">
+        <Switch>
+          <Route exact path="/">
+            <LoginDashboard></LoginDashboard>
+          </Route>
+          <Route exact path="/rooms">
+            <RoomDashboard className="dashboard-background"></RoomDashboard>
+          </Route>
+          <Route exact path="/rooms/:id">
+            <RoomDetailDashboard></RoomDetailDashboard>
+          </Route>
+        </Switch>
+      </div>
     </BrowserRouter>
   );
 }

@@ -33,7 +33,9 @@ code {
   background-color: purple;
 }
 */
-
+.login-container {
+  background-color: white;
+}
 .img-login {
   object-fit: cover;
   height: 100vh;
