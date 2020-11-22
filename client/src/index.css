@@ -54,6 +54,9 @@ code {
 .p-login {
   text-align: center;
 }
+.p-error {
+  color: red;
+}
 .div-names {
   font-size: 0.8em;
   margin-top: 20vh;

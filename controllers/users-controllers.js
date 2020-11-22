@@ -16,7 +16,7 @@ exports.getUser = async (req, res) => {
       if (user != undefined) {
         return res.status(200).json(user);
       } else {
-        return res.status(400).json("Hay un error en los datos");
+        return res.status(404).json("Hay un error en los datos");
       }
     })
     .catch((err) => {
