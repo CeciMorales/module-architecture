@@ -22,7 +22,7 @@ function App() {
             <LoginDashboard></LoginDashboard>
           </Route>
           <Route exact path="/rooms">
-            <RoomDashboard></RoomDashboard>
+            <RoomDashboard className="dashboard-background"></RoomDashboard>
           </Route>
           <Route exact path="/rooms/:id">
             <RoomDetailDashboard></RoomDetailDashboard>

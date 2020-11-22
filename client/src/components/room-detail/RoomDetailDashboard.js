@@ -4,7 +4,7 @@ import RoomDetail from './RoomDetail'
 const RoomDetailDashboard = () => {
     return (
         <>
-            <RoomDetail></RoomDetail>
+            <RoomDetail ></RoomDetail>
         </>
     )
 }
