@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from "react";
 
 import RoomElement from "./RoomElement";
-const RoomList = ({ salones }) => {
+const RoomList = ({ salones, match }) => {
+  let res = match.params;
+  useEffect(() => {
+    axios(`http://localhost:8000/api/reservaciones/`).then((result) => {
+      console.log(result.data);
+      setSalones(result.data);
+    });
+  }, []);
   return (
     <>
       <h3 className="building-title">Edificio CEDETEC </h3>
