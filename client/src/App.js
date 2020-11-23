@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
 import "./App.css";
+import Modal from "react-bootstrap/Modal";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import LoginDashboard from "./components/login/LoginDashboard";
