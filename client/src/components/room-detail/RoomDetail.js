@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-const RoomDetail = ({ salon }) => {
+const RoomDetail = ({ salon, horarios }) => {
   return (
     <>
       <div className="card">
         <h5 className="card-header">Características</h5>
         <div className="card-body">
-          <div class="row">
-            <div class="col mt-2">
+          <div className="row">
+            <div className="col mt-2">
               <h5 className="card-title">Salón: {salon.id_salon}</h5>
               <p>
                 <svg
@@ -59,7 +59,7 @@ const RoomDetail = ({ salon }) => {
                 Capacidad: {salon.capacidad}
               </p>
             </div>
-            <div class="col mt-5">
+            <div className="col mt-5">
               <p>
                 <svg
                   width="1em"
@@ -111,6 +111,37 @@ const RoomDetail = ({ salon }) => {
                 Tomas de corriente: {salon.tomasCorriente}
               </p>
             </div>
+          </div>
+          <div className="row">
+            <br></br>
+            <h5 className="card-title">Reservaciones</h5>
+            <br></br>
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Día</th>
+                  <th scope="col">Mes</th>
+                  <th scope="col">Año</th>
+                  <th scope="col">Hora Inicio</th>
+                  <th scope="col">Hora Fin</th>
+                  <th scope="col">Motivo</th>
+                  <th scope="col">Estatus</th>
+                </tr>
+              </thead>
+              <tbody>
+                {horarios.map((horario) => (
+                  <tr>
+                    <td scope="row">{horario.dia}</td>
+                    <td>{horario.mes}</td>
+                    <td>{horario.anio}</td>
+                    <td>{horario.horaInicio}</td>
+                    <td>{horario.horaFin}</td>
+                    <td>{horario.razon}</td>
+                    <td>{horario.estado}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

@@ -7,6 +7,15 @@ import RoomFooter from "../rooms/RoomFooter";
 const RoomDetailDashboard = ({ match }) => {
   let res = match.params.id;
   const [salon, setSalon] = useState([]);
+  const [horarios, setHorarios] = useState([]);
+
+  useEffect(() => {
+    axios(`http://localhost:8000/api/reservaciones/salon/${res}`).then(
+      (result) => {
+        setHorarios(result.data);
+      }
+    );
+  }, []);
 
   useEffect(() => {
     axios(`http://localhost:8000/api/salones/${res}`).then((result) => {
@@ -17,7 +26,7 @@ const RoomDetailDashboard = ({ match }) => {
   return (
     <>
       <RoomHeader></RoomHeader>
-      <RoomDetail salon={salon}></RoomDetail>
+      <RoomDetail salon={salon} horarios={horarios}></RoomDetail>
       <RoomFooter></RoomFooter>
     </>
   );

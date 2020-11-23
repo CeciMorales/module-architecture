@@ -22,6 +22,6 @@ exports.getByUser = (email) => {
   return knex.select("*").from("reservaciones").where("user_email", email);
 };
 
-exports.getBySalon = (id_salon) => {
-  return knex.select("*").from("reservaciones").where("id_salon", id_salon);
+exports.getBySalon = (id) => {
+  return knex.select("*").from("reservaciones").where("id_salon", id);
 };

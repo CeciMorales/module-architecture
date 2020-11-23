@@ -21,12 +21,12 @@ exports.getReservacionesByUser = async (req, res) => {
 };
 
 exports.getReservacionesBySalon = async (req, res) => {
-  let id_salon = req.params.id_salon;
+  let id = req.params.id;
 
-  await Reservacion.getBySalon(id_salon)
-    .then((reservacion) => {
-      console.log("Reservaciones controller:", reservacion);
-      return res.status(200).json(reservacion);
+  await Reservacion.getBySalon(id)
+    .then((reservaciones) => {
+      console.log("Reservaciones controller:", reservaciones);
+      res.json(reservaciones);
     })
     .catch((err) => {
       console.log(err);
