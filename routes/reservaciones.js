@@ -5,10 +5,7 @@ router.get("/", reservacionesController.getReservaciones);
 
 router.get("/:email", reservacionesController.getReservacionesByUser);
 
-router.get(
-  "/salones/:id_salon",
-  reservacionesController.getReservacionesBySalon
-);
+router.get("/:id_salon", reservacionesController.getReservacionesBySalon);
 
 router.post("/createReservacion", reservacionesController.createReservacion);
 module.exports = router;

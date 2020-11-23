@@ -19,9 +19,11 @@ function App() {
           <Route exact path="/rooms">
             <RoomDashboard className="dashboard-background"></RoomDashboard>
           </Route>
-          <Route exact path="/rooms/:id">
-            <RoomDetailDashboard></RoomDetailDashboard>
-          </Route>
+          <Route
+            exact
+            path="/rooms/:id"
+            component={RoomDetailDashboard}
+          ></Route>
         </Switch>
       </div>
     </BrowserRouter>
