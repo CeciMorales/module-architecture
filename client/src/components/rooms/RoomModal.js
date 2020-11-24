@@ -19,7 +19,7 @@ const RoomModal = () => {
   const handleShow = () => setShow(true);
   const handleSubmit = () => {
     axios
-      .post("http://localhost:8000/api/reservaciones/createReservacion", {
+      .post("/api/reservaciones/createReservacion", {
         user_email: reserva.user_email,
         id_salon: reserva.id_salon,
         dia: reserva.dia,

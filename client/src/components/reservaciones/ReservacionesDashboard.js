@@ -9,7 +9,7 @@ const RoomDetailDashboard = () => {
   const [reservaciones, setReservaciones] = useState([]);
 
   useEffect(() => {
-    axios(`http://localhost:8000/api/reservaciones/${email}`).then((result) => {
+    axios(`/api/reservaciones/${email}`).then((result) => {
       setReservaciones(result.data);
     });
   }, []);

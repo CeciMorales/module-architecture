@@ -12,7 +12,7 @@ const LoginForm = () => {
     event.preventDefault();
     console.log("Se envio");
     await axios
-      .post("http://localhost:8000/api/users/login", {
+      .post("/api/users/login", {
         email: email,
         password: password,
       })

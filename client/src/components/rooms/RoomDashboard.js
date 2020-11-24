@@ -11,7 +11,7 @@ const RoomDashboard = () => {
   const [salones, setSalones] = useState([]);
   let usuario = localStorage.getItem("userType");
   useEffect(() => {
-    axios(`http://localhost:8000/api/salones`).then((result) => {
+    axios(`/api/salones`).then((result) => {
       console.log(result.data);
       setSalones(result.data);
     });

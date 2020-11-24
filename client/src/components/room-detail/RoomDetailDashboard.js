@@ -10,15 +10,13 @@ const RoomDetailDashboard = ({ match }) => {
   const [horarios, setHorarios] = useState([]);
 
   useEffect(() => {
-    axios(`http://localhost:8000/api/reservaciones/salon/${res}`).then(
-      (result) => {
-        setHorarios(result.data);
-      }
-    );
+    axios(`/api/reservaciones/salon/${res}`).then((result) => {
+      setHorarios(result.data);
+    });
   }, []);
 
   useEffect(() => {
-    axios(`http://localhost:8000/api/salones/${res}`).then((result) => {
+    axios(`/api/salones/${res}`).then((result) => {
       console.log(result.data);
       setSalon(result.data);
     });
